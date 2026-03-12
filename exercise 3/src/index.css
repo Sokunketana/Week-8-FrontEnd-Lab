@@ -60,7 +60,6 @@ header h1 {
 
 .order-button {
   height: 1.5em;
-  line-height: 1.5em;
   width: 1.5em;
   font-size: 1.5em;
   font-weight: bold;
@@ -69,12 +68,18 @@ header h1 {
   color: white;
   text-align: center;
   cursor: pointer;
-}
-.order-button .disable {
-  background-color: var(--grey-color);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.order-button:hover {
+.order-button:disabled {
+  background-color: var(--grey-color);
+  cursor: not-allowed;
+}
+
+.order-button:hover:not(:disabled) {
   background: var(--main-color-light);
 }
 
